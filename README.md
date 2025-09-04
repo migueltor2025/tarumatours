@@ -1,6 +1,6 @@
 # 🌎 Taruma Tours – Turismo en Perú
 
-https://upload.wikimedia.org/wikipedia/commons/3/35/Machu_Picchu%2C_Peru.jpg
+https://i.ibb.co/4w4dyff7/TARUMA-LOGO.png
 
 ## ✨ Descripción
 
@@ -32,7 +32,7 @@ Se ha desarrollado con **React** y desplegado en **Vercel**, asegurando un dise�
 
 ## 📸 Vista Previa
 
-![Preview](https://ibb.co/YFdCwhZj)  
+![Preview del proyecto](https://i.ibb.co/67tMLFBs/pantallaprincipal.png)
 
 
 ---
@@ -49,10 +49,10 @@ Si deseas probar el proyecto en tu máquina local:
 
 ```bash
 # Clonar el repositorio
-git clone https://github.com/TU_USUARIO/TU_REPOSITORIO.git
+git clone https://github.com/migueltor2025/tarumatours.git
 
 # Entrar a la carpeta del proyecto
-cd TU_REPOSITORIO
+cd tarumatours
 
 # Instalar dependencias
 npm install
