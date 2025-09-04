@@ -1,6 +1,6 @@
-# 🌎 Taruma Tours – Turismo en Perú 🇵🇪
+# 🌎 Taruma Tours – Turismo en Perú
 
-![Banner de Turismo en Perú](https://upload.wikimedia.org/wikipedia/commons/3/35/Machu_Picchu%2C_Peru.jpg)
+https://upload.wikimedia.org/wikipedia/commons/3/35/Machu_Picchu%2C_Peru.jpg
 
 ## ✨ Descripción
 
@@ -33,7 +33,7 @@ Se ha desarrollado con **React** y desplegado en **Vercel**, asegurando un dise�
 ## 📸 Vista Previa
 
 ![Preview](https://ibb.co/YFdCwhZj)  
-*(Coloca aquí una captura real de tu proyecto desplegado en Vercel para que se vea más vistoso)*
+
 
 ---
 
