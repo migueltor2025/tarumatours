@@ -1,12 +1,61 @@
-# React + Vite
+# 🌎 Taruma Tours – Turismo en Perú 🇵🇪
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Banner de Turismo en Perú](https://upload.wikimedia.org/wikipedia/commons/3/35/Machu_Picchu%2C_Peru.jpg)
 
-Currently, two official plugins are available:
+## ✨ Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Taruma Tours** es una página web de turismo enfocada en mostrar la belleza del Perú.  
+El proyecto busca promover destinos turísticos, brindar información detallada y generar una experiencia interactiva para los usuarios interesados en viajar.  
 
-## Expanding the ESLint configuration
+Se ha desarrollado con **React** y desplegado en **Vercel**, asegurando un diseño moderno, responsive y fácil de usar.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🚀 Tecnologías Utilizadas
+
+- ⚛️ **React.js** – Librería para la construcción de interfaces dinámicas.  
+- 🎨 **Tailwind CSS** (o CSS puro, si aplicaste) – Estilos modernos y adaptables.  
+- 🌐 **Vercel** – Plataforma de despliegue.  
+- 🛠 **GitHub** – Control de versiones y hosting del código.  
+
+---
+
+## 🌄 Características
+
+✅ Diseño moderno y atractivo.  
+✅ Página responsive (adaptada a móviles, tablets y PC).  
+✅ Información sobre los principales destinos turísticos del Perú.  
+✅ Sección de galería con imágenes.  
+✅ Navegación rápida e intuitiva.  
+
+---
+
+## 📸 Vista Previa
+
+![Preview](https://ibb.co/YFdCwhZj)  
+*(Coloca aquí una captura real de tu proyecto desplegado en Vercel para que se vea más vistoso)*
+
+---
+
+## 🔗 Enlace al Proyecto
+
+👉 [Visita la web desplegada en Vercel](https://tarumatours.vercel.app/)  
+
+---
+
+## 📂 Instalación y Uso
+
+Si deseas probar el proyecto en tu máquina local:
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/TU_USUARIO/TU_REPOSITORIO.git
+
+# Entrar a la carpeta del proyecto
+cd TU_REPOSITORIO
+
+# Instalar dependencias
+npm install
+
+# Ejecutar el proyecto
+npm start
