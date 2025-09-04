@@ -32,7 +32,7 @@ Se ha desarrollado con **React** y desplegado en **Vercel**, asegurando un diseÃ
 
 ## ðŸ“¸ Vista Previa
 
-![Preview del proyecto](https://i.ibb.co/67tMLFBs/pantallaprincipal.png)
+https://i.ibb.co/67tMLFBs/pantallaprincipal.png
 
 
 ---
