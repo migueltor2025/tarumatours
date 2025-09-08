@@ -1,0 +1,73 @@
+export const products = [
+  {
+    id: 1,
+    name: 'Bolso de Mano',
+    price: 90.99,
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVXa9235fbxO9SzMdr_-kL8duCWevoa3qO-Q&s',
+    description: 'Bolso mediano de mano hecho en tejido cuzqueño',
+  },
+  {
+    id: 2,
+    name: 'Tejido decorativo para pared',
+    price: 160.99,
+    image: 'https://i.pinimg.com/736x/06/85/4b/06854b767580471e24e71a1117a98d1c.jpg',
+    description: 'Lindo tejido decorativo para pared con diseño de Puno',
+  },
+  {
+    id: 3,
+    name: 'Billetera',
+    price: 49.99,
+    image: 'https://d20f60vzbd93dl.cloudfront.net/uploads/tienda_004197/tienda_004197_697440395c3695a209593732c535511f9b55b569_producto_large_90.jpg',
+    description: 'Billetera con diseño andino',
+  },
+  {
+    id: 4,
+    name: 'Mochila',
+    price: 129.99,
+    image: 'https://i.etsystatic.com/11073399/r/il/bebb1d/1269207146/il_570xN.1269207146_7t3c.jpg',
+    description: 'Mochila mediana con colores andinos',
+  },
+  {
+    id: 5,
+    name: 'Retablo Ayacuchano',
+    price: 159.99,
+    image: 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXEkkXFZlTHaetDH4u0zFopaxrGkLKaItg8iXjCFWoFaEGiqYYNKYph3kkFdApuyffJrHxwz2xJlWpCn3qM7xXxUVmWW2VEWTfan0vh000ex4HgtjfeRoCbpacrlJFzWV7_OxmSQ4pVKlY/s1600/RT-AIR+14..jpg',
+    description: 'Retablo ayacuchano con representacion de nacimiento en navidad',
+  },
+  {
+    id: 6,
+    name: 'Poncho cuzqueño',
+    price: 139.99,
+    image: 'https://qoripuskay.com/wp-content/uploads/2024/11/poncho-andino.webp',
+    description: 'Poncho cuzqueño ideal para el frio de la sierra',
+  },
+  {
+    id: 7,
+    name: 'Taza de de arcilla',
+    price: 180.99,
+    image: 'https://perusabroso.net/wp-content/uploads/vaso-chicha-peruana-tradicional.webp',
+    description: 'Taza andina hecho en arcilla',
+  },
+  {
+    id: 8,
+    name: 'Pisco peruano',
+    price: 119.99,
+    image: 'https://th.bing.com/th/id/R.c0a862bcc23fc4beed6344bf97261a1a?rik=sBz2u9t3IRFhqQ&riu=http%3a%2f%2fnewworldreview.com%2fwp-content%2fuploads%2f2011%2f09%2fpisco_porton_spirit_peru-254x300.jpg&ehk=vjewOwq21AyzF3P2yuu6isx9HramtlZx2OJ%2b9QViboA%3d&risl=&pid=ImgRaw&r=0',
+    description: 'Pisco peruano premiun Porton de Pisco Peru.',
+  },
+  {
+    id: 9,
+    name: 'Zandalias de trujillo',
+    price: 70.99,
+    image: 'https://i.etsystatic.com/30736057/c/2172/2172/0/46/il/4526f0/3310717634/il_600x600.3310717634_njdq.jpg',
+    description: 'Zandalias hecho con cuero peruano y tejidos con colores andinos',
+  },
+  {
+    id: 10,
+    name: 'Zapatillas de Puno',
+    price: 60.99,
+    image: 'https://i.etsystatic.com/47619995/r/il/bb0f3d/5538713619/il_fullxfull.5538713619_50lc.jpg',
+    description: 'Zapatillas hecho en Peru con tejidos y colores andinos',
+  },
+
+];
