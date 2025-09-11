@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./index.css";
 
-// Componentes de tu página turística
 import HeaderSlider from "./componentes/HeaderSlider";
 import Menu from "./componentes/Menu";
 import Hero from "./componentes/Hero";
@@ -10,62 +9,56 @@ import Tours from "./componentes/Tours";
 import Contact from "./componentes/Contact";
 import Footer from "./componentes/Footer";
 
-// Componentes de la tienda (nuevos)
 import ProductList from "./componentes/ProductList";
 import Cart from "./componentes/Cart";
+import ReservaTours from "./componentes/ReservaTours";
 
 const App = () => {
-  // Estado para saber si estamos en la tienda o en la página principal
-  const [isStorePage, setIsStorePage] = useState(false);
-
-  // Estado del carrito
+  const [page, setPage] = useState("home"); // home | store | reserve
   const [cartItems, setCartItems] = useState([]);
 
-  // Añadir producto al carrito
+  // Función que asegura scroll arriba al cambiar de página
+  const navigate = (target) => {
+    setPage(target);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   const handleAddToCart = (product) => {
     setCartItems((prevItems) => [...prevItems, product]);
   };
 
-  // Quitar producto del carrito
   const handleRemoveFromCart = (productId) => {
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== productId));
   };
 
-  // Navegación
-  const handleNavigateToStore = () => {
-    setIsStorePage(true); // Ir a tienda
-  };
-
-  const handleNavigateToHome = () => {
-    setIsStorePage(false); // Ir a página principal
-  };
-
   return (
     <>
-      {/* Aquí puedes fusionar tu HeaderSlider + Menu con un Header que tenga navegación */}
       <HeaderSlider />
       <Menu
-        onNavigateToStore={handleNavigateToStore}
-        onNavigateToHome={handleNavigateToHome}
+        onNavigateToHome={() => navigate("home")}
+        onNavigateToStore={() => navigate("store")}
+        onNavigateToReserve={() => navigate("reserve")}
         cartCount={cartItems.length}
       />
 
       <main>
-        {isStorePage ? (
+        {page === "home" && (
           <>
-            {/* Página de Tienda */}
-            <ProductList onAddToCart={handleAddToCart} />
-            <Cart cartItems={cartItems} onRemoveFromCart={handleRemoveFromCart} />
-          </>
-        ) : (
-          <>
-            {/* Página principal de turismo */}
             <Hero />
             <About />
             <Tours />
             <Contact />
           </>
         )}
+
+        {page === "store" && (
+          <>
+            <ProductList onAddToCart={handleAddToCart} />
+            <Cart cartItems={cartItems} onRemoveFromCart={handleRemoveFromCart} />
+          </>
+        )}
+
+        {page === "reserve" && <ReservaTours />}
       </main>
 
       <Footer />
@@ -74,4 +67,3 @@ const App = () => {
 };
 
 export default App;
-

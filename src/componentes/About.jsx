@@ -9,15 +9,17 @@ const About = () => {
           <span className="subtitulo">¿Taruma Tours?</span>
           <h2>¿Quiénes Somos?</h2>
           <p>
-            Taruma Tours es una <strong>Agencia de Turismo</strong> que promueve el turismo vivencial, cultural y natural en todo el Perú. Conectamos viajeros con experiencias auténticas que respetan nuestras tradiciones y diversidad.
+            Taruma Tours es una <strong>Agencia de Turismo</strong> que promueve el turismo vivencial, cultural y natural en todo el Perú. 
+            Conectamos viajeros con experiencias auténticas que respetan nuestras tradiciones y diversidad.
           </p>
           <p>
             Nuestra misión es ofrecer experiencias confiables, seguras y memorables, posicionando al Perú como un destino de clase mundial.
           </p>
         </div>
+
         <div className="imagenes">
-          <img src={imgOxapampa} alt="IMAGEN 1" />
-          <img src={imgGuagapo} alt="IMAGEN 2" />
+          <img src={imgOxapampa} alt="Tour en Oxapampa" />
+          <img src={imgGuagapo} alt="Caverna de Guagapo" />
         </div>
       </div>
     </section>
