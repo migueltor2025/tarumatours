@@ -15,11 +15,13 @@ import ReservaTours from "./componentes/ReservaTours";
 
 const App = () => {
   const [page, setPage] = useState("home"); // home | store | reserve
+  const [showCart, setShowCart] = useState(false); // 🔹 controla si abrimos el carrito directo
   const [cartItems, setCartItems] = useState([]);
 
-  // Función que asegura scroll arriba al cambiar de página
-  const navigate = (target) => {
+  // Navegación con scroll arriba
+  const navigate = (target, cart = false) => {
     setPage(target);
+    setShowCart(cart); // si cart=true, abre el carrito directamente
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -38,6 +40,7 @@ const App = () => {
         onNavigateToHome={() => navigate("home")}
         onNavigateToStore={() => navigate("store")}
         onNavigateToReserve={() => navigate("reserve")}
+        onNavigateToCart={() => navigate("store", true)} // 🔹 abre directo el carrito
         cartCount={cartItems.length}
       />
 
@@ -53,7 +56,10 @@ const App = () => {
 
         {page === "store" && (
           <>
-            <ProductList onAddToCart={handleAddToCart} />
+            {/* Si vengo desde el menú normal → muestro productos + carrito */}
+            {!showCart && <ProductList onAddToCart={handleAddToCart} />}
+
+            {/* Si vengo desde el carrito → muestro solo el carrito */}
             <Cart cartItems={cartItems} onRemoveFromCart={handleRemoveFromCart} />
           </>
         )}

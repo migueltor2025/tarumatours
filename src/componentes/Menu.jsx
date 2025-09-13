@@ -3,17 +3,13 @@ import React from "react";
 const Menu = ({ onNavigateToHome, onNavigateToStore, onNavigateToReserve, cartCount }) => {
   const handleNavigate = (e, target) => {
     e.preventDefault();
-
-    // 1️⃣ Ir primero a la página principal
     onNavigateToHome();
-
-    // 2️⃣ Pequeño delay para que la vista principal se renderice
     setTimeout(() => {
       const section = document.getElementById(target);
       if (section) {
         section.scrollIntoView({ behavior: "smooth" });
       }
-    }, 200); // 200ms es seguro, ajustable
+    }, 200);
   };
 
   return (
@@ -55,7 +51,19 @@ const Menu = ({ onNavigateToHome, onNavigateToStore, onNavigateToReserve, cartCo
 
         {cartCount > 0 && (
           <li>
-            <span className="cart-count">🛒 {cartCount}</span>
+            <a
+              href="#carrito"
+              onClick={(e) => {
+                e.preventDefault();
+                onNavigateToStore();
+                setTimeout(() => {
+                  document.getElementById("carrito")?.scrollIntoView({ behavior: "smooth" });
+                }, 200);
+              }}
+              className="cart-link"
+            >
+              🛒 <span className="cart-count">{cartCount}</span>
+            </a>
           </li>
         )}
       </ul>

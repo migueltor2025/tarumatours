@@ -35,7 +35,7 @@ body {
 }
 
 .logo img {
-  width: 200px;    /* ANCHO FIJO DEL LOGO */
+  width: 200px; /* ANCHO FIJO DEL LOGO */
   height: auto;
 }
 
@@ -75,7 +75,6 @@ body {
   height: 100%;
 }
 
-/* Menú */
 /* Menú debajo del slider */
 .menu-inferior {
   background-color: #b71c1c;
@@ -84,7 +83,7 @@ body {
   z-index: 999;
   position: sticky;
   top: 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* sombra opcional para separarlo del contenido */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .menu-inferior ul {
@@ -96,17 +95,32 @@ body {
   padding: 0;
 }
 
-.menu-inferior a {
+.menu-inferior a,
+.menu-inferior .cart-link {
   color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
-  transition: color 0.3s;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
-.menu-inferior a:hover {
+/* 🎨 Hover dinámico */
+.menu-inferior a:hover,
+.menu-inferior .cart-link:hover {
+  background-color: #9a0007; /* un rojo más oscuro */
   color: #ffeb3b;
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
+
+/* Contador del carrito */
+.menu-inferior .cart-link {
+  position: relative;
+}
+
 
 
 /* Sección Hero */
@@ -154,14 +168,7 @@ section {
   text-align: center;
 }
 
-.nosotros .imagen-seccion {
-  width: 80%;
-  max-width: 700px;
-  margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
+/* Nosotros */
 .quienes-somos {
   padding: 60px 20px;
   background-color: #fff;
@@ -178,7 +185,6 @@ section {
   margin: auto;
 }
 
-/* Bloque de texto alineado a la izquierda y justificado */
 .contenido-quienes .texto {
   flex: 1 1 50%;
   max-width: 600px;
@@ -199,18 +205,15 @@ section {
 }
 
 .contenido-quienes .texto p {
-   text-align: justify;
+  text-align: justify;
   text-justify: inter-word;
-  hyphens: none; /* evita el guion medio */
 }
 
-/* Imágenes al lado derecho del texto */
 .contenido-quienes .imagenes {
   flex: 1 1 40%;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  height: 100%;
 }
 
 .contenido-quienes .imagenes img {
@@ -219,8 +222,6 @@ section {
   object-fit: cover;
   border-radius: 10px;
 }
-
-
 
 /* Galería de Tours */
 .galeria-tours {
@@ -232,13 +233,14 @@ section {
 }
 
 .tour {
-  width: calc(50% - 20px); /* 2 por fila con margen */
+  width: calc(50% - 20px);
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
+  transition: transform 0.3s ease;
 }
 
 .tour:hover {
@@ -263,13 +265,13 @@ section {
   color: #555;
 }
 
-/* === Estilos para slider de imágenes por tour === */
+/* Slider de imágenes en tours */
 .tour-slider {
   position: relative;
   width: 100%;
   height: 380px;
   overflow: hidden;
-  background-color: #000; /* opcional: evita fondo blanco si hay espacios */
+  background-color: #000;
   border-radius: 10px 10px 0 0;
 }
 
@@ -282,15 +284,13 @@ section {
   transform: translate(-50%, -50%);
   object-fit: contain;
   opacity: 0;
-  transition: opacity 1s ease-in-out; /*la transicion del desvanecimiento de la imagen
-  background-color: #000; /* opcional, evita bordes blancos */
+  transition: opacity 1s ease-in-out;
 }
 
 .tour-slider img.visible {
   opacity: 1;
   z-index: 1;
 }
-
 
 /* Formulario de contacto */
 .contacto form {
@@ -376,13 +376,12 @@ button:hover {
   transform: scale(1.1);
 }
 
+/* Responsivo */
 @media (max-width: 768px) {
   .tour {
     width: 100%;
   }
-}
 
-@media (max-width: 768px) {
   .contenido-quienes {
     flex-direction: column;
     text-align: center;
@@ -397,15 +396,6 @@ button:hover {
   }
 }
 
-.menu-inferior .cart-count {
-  background-color: white;
-  color: #b71c1c !important;   /* 🔑 se fuerza el color */
-  font-size: 13px;
-  font-weight: bold;
-  border-radius: 50%;
-  padding: 2px 6px;
-  margin-left: 6px;
-  display: inline-block;
-  min-width: 18px;
-  text-align: center;
+#nosotros, #tours, #contacto {
+  scroll-margin-top: 100px; /* ajusta según la altura de tu menú */
 }
